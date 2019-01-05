@@ -1,0 +1,4 @@
+
+- In 24 we had linear recursion with log(n) "depth" => Theta(log(n))
+- In here we have tree recursion (doubling each level) with the same
+  depth => number of nodes-steps = Theta(2^log(n)) = Theta(n)

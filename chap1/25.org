@@ -1,0 +1,3 @@
+
+Last step in fast-expt would be something like a^(n//2) * a^(n//2) and
+its complexity would be Omega(a^(n//2)) while with expmod we had log(n).
