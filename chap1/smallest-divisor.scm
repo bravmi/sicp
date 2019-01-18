@@ -13,4 +13,6 @@
       (+ test-divisor 2)))
 
 (define (prime? n)
-  (= n (smallest-divisor n)))
+  (if (<= n 1)
+      false
+      (= n (smallest-divisor n))))
