@@ -19,10 +19,9 @@
   (define (f2 k)
     (let* ((x (+ a (* k h)))
            (y (f x)))
-    (cond
-        ((or (= k 0) (= k n)) y)
-        ((even? k) (* 2 y))
-        (else (* 4 y)))))
+    (cond ((or (= k 0) (= k n)) y)
+          ((even? k) (* 2 y))
+          (else (* 4 y)))))
   (* (sum f2 0 inc n)
      (/ h 3))))
 
