@@ -9,7 +9,7 @@
           ((filter a)
            (iter (next a) (combiner result (term a))))
           (else
-           (iter (next a) result))))
+            (iter (next a) result))))
   (iter a null-value))
 
 (define (sum term a next b)
