@@ -6,9 +6,11 @@
   (g 2))
 
 
-(f square)
-; 4
-(f (lambda (z) (* z (+ z 1))))
-; 6
+(check-expect (f square) 4)
+(check-expect (f (lambda (z)
+                         (* z (+ z 1))))
+              6)
+(test)
+
 (f f)
 ; application: not a procedure; 
