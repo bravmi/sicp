@@ -28,7 +28,7 @@
                       (let ((denom (first-denomination kinds-of-coins)))
                         (map (lambda (a) (cons denom a))
                              (cc-list (- amount denom)
-                                 kinds-of-coins)))))))
+                                      kinds-of-coins)))))))
 
 
 (check-expect (count-change 100) 292)
