@@ -1,6 +1,6 @@
 
 (load "../utils.scm")
-(load "rational.scm")
+(load "rat.scm")
 
 
 (define (make-segment start-segment end-segment)

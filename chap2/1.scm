@@ -1,6 +1,6 @@
 
 (load "../utils.scm")
-(load "rational.scm")
+(load "rat.scm")
 
 
 (check-expect (make-rat 1 2) (cons 1 2))
