@@ -1,5 +1,4 @@
 #lang racket/base
-(require "../utils.rkt")
 
 (define (square x)
   (* x x))
