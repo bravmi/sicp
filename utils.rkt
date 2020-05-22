@@ -1,7 +1,8 @@
-
+#lang racket/base
+(require racket/math)
 (require rackunit)
-(require test-engine/racket-tests)
 
+(provide (all-defined-out))
 
 (define (display-line x)
   (display x)
@@ -32,16 +33,14 @@
 (define (random-big k)
   (exact-floor (* (random) k)))
 
-
+(define (identity x) x)
 (define (repeat f n)
   (if (= n 0)
       identity
       (lambda (x) (f ((repeat f (- n 1)) x)))))
 
-
 (define (runtime) (current-milliseconds))
 
-
-(define assert= check-equal?)
+(define assert= check-eq?)
 (define (assert-= v1 v2 [epsilon 1e-3])
   (check-= v1 v2 epsilon))
