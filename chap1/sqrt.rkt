@@ -1,4 +1,6 @@
+#lang racket/base
 
+(provide (all-defined-out))
 
 (define (sqrt-iter guess x)
   (if (good-enough? guess x)
@@ -18,3 +20,8 @@
 
 (define (sqrt x)
   (sqrt-iter 1.0 x))
+
+(module+ test
+  (require rackunit)
+  (define eps 1e-3)
+  (check-= (sqrt-iter 1.0 4) 2 eps))

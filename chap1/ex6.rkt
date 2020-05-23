@@ -1,7 +1,5 @@
-
-(load "../utils.scm")
-(load "sqrt.scm")
-
+#lang racket/base
+(require "sqrt.rkt")
 
 (define (new-if predicate then-clause else-clause)
   (cond (predicate then-clause)
@@ -13,5 +11,5 @@
           (sqrt-iter (improve guess x)
                      x)))
 
-
-; (sqrt-iter 1.0 5) ; blows up
+(module+ main
+  (sqrt-iter 1.0 5)) ; blows up
