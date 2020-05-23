@@ -1,6 +1,5 @@
 #lang racket/base
 (require racket/math)
-(require rackunit)
 
 (provide (all-defined-out))
 
@@ -40,7 +39,3 @@
       (lambda (x) (f ((repeat f (- n 1)) x)))))
 
 (define (runtime) (current-milliseconds))
-
-(define assert= check-eq?)
-(define (assert-= v1 v2 [epsilon 1e-3])
-  (check-= v1 v2 epsilon))
