@@ -1,6 +1,6 @@
 #lang racket/base
 
-(module* main #f
+(module+ main
   10
   (+ 5 3 4)
   (- 9 1)

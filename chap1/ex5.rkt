@@ -7,5 +7,5 @@
       0
       y))
 
-(module* main #f
+(module+ main
   (test 0 (p))) ; infinite loop
