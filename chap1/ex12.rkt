@@ -1,6 +1,4 @@
-
-(load "../utils.scm")
-
+#lang racket/base
 
 (define (pascal row col)
   (cond ((= col 0) 1)
@@ -9,7 +7,8 @@
         (else (+ (pascal (- row 1) (- col 1))
                  (pascal (- row 1) col)))))
 
-
-(assert= (pascal 0 0) 1)
-(assert= (pascal 3 1) 3)
-(assert= (pascal 4 2) 6)
+(module+ test
+  (require rackunit)
+  (check-equal? (pascal 0 0) 1)
+  (check-equal? (pascal 3 1) 3)
+  (check-equal? (pascal 4 2) 6))
