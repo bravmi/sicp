@@ -1,6 +1,5 @@
-
-(load "../utils.scm")
-
+#lang racket/base
+(require "../utils.rkt")
 
 (define (* a b)
   (cond ((= a 0) 0)
@@ -11,7 +10,7 @@
 (define (halve a)
   (/ a 2))
 
-
-(check-expect (* 4 4) 16)
-(check-expect (* 127 128) 16256)
-(test)
+(module+ test
+  (require rackunit)
+  (check-equal? (* 4 4) 16)
+  (check-equal? (* 127 128) 16256))
