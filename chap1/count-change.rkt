@@ -1,6 +1,4 @@
-
-(load "../utils.scm")
-
+#lang racket/base
 
 (define (count-change amount)
   (cc amount 5))
@@ -30,7 +28,7 @@
                              (cc-list (- amount denom)
                                       kinds-of-coins)))))))
 
-
-(check-expect (count-change 100) 292)
-(check-expect (length (count-change-list 100)) 292)
-(test)
+(module+ test
+  (require rackunit)
+  (check-equal? (count-change 100) 292)
+  (check-equal? (length (count-change-list 100)) 292))
