@@ -1,6 +1,4 @@
-
-(load "../utils.scm")
-
+#lang racket/base
 
 ; better grasp in matrix form though
 (define (fib n)
@@ -10,8 +8,8 @@
         ((even? count)
          (fib-iter a
                    b
-           (+ (* p p) (* q q))
-           (+ (* q q) (* 2 p q))
+                   (+ (* p p) (* q q))
+                   (+ (* q q) (* 2 p q))
                    (/ count 2)))
         (else (fib-iter (+ (* b q) (* a q) (* a p))
                         (+ (* b p) (* a q))
@@ -19,10 +17,10 @@
                         q
                         (- count 1)))))
 
-
-(check-expect (fib 2) 1)
-(check-expect (fib 4) 3)
-(check-expect (fib 8) 21)
-(check-expect (fib 16) 987)
-(check-expect (fib 32) 2178309)
-(test)
+(module+ test
+  (require rackunit)
+  (check-equal? (fib 2) 1)
+  (check-equal? (fib 4) 3)
+  (check-equal? (fib 8) 21)
+  (check-equal? (fib 16) 987)
+  (check-equal? (fib 32) 2178309))
