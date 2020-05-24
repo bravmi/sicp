@@ -1,5 +1,7 @@
 #lang racket/base
 
+(provide (all-defined-out))
+
 (define (count-change amount)
   (cc amount 5))
 (define (cc amount kinds-of-coins)

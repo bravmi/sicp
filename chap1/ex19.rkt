@@ -1,5 +1,7 @@
 #lang racket/base
 
+(provide (all-defined-out))
+
 ; better grasp in matrix form though
 (define (fib n)
   (fib-iter 1 0 0 1 n))
