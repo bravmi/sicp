@@ -1,8 +1,6 @@
 #lang racket/base
 (require "../utils.rkt")
 
-(provide (all-defined-out))
-
 (define (fast-expt b n)
   (cond ((= n 0) 1)
         ((even? n) (square (fast-expt b (/ n 2))))

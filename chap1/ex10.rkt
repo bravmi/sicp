@@ -1,8 +1,6 @@
 #lang racket/base
 (require "../utils.rkt")
 
-(provide (all-defined-out))
-
 (define (A x y)
   (cond ((= y 0) 0)
         ((= x 0) (* 2 y))

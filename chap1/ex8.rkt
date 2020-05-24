@@ -1,8 +1,6 @@
 #lang racket/base
 (require (prefix-in utils: "../utils.rkt"))
 
-(provide (all-defined-out))
-
 (define (cubert-iter guess x)
   (if (good-enough? guess x)
       guess

@@ -1,7 +1,5 @@
 #lang racket/base
 
-(provide (all-defined-out))
-
 (define (pascal row col)
   (cond ((= col 0) 1)
         ((= row col) 1)

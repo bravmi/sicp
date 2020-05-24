@@ -1,7 +1,5 @@
 #lang racket/base
 
-(provide (all-defined-out))
-
 (define (square x)
   (* x x))
 
