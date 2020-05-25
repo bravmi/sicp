@@ -1,0 +1,2 @@
+1. Close enough I think. ~0.5-0.6
+2. Calling new func next might cause some discrepancy.

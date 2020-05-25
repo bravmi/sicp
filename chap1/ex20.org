@@ -1,3 +1,2 @@
-
 - normal-order = 18 rems (14 cond. + 4 last)
 - applicative  = 4 rems

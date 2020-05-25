@@ -29,9 +29,6 @@
 (define (even? x)
   (= (remainder x 2) 0))
 
-(define (random-big k)
-  (exact-floor (* (random) k)))
-
 (define (identity x) x)
 (define (repeat f n)
   (if (= n 0)
@@ -39,3 +36,6 @@
       (lambda (x) (f ((repeat f (- n 1)) x)))))
 
 (define (runtime) (current-milliseconds))
+
+(define true #t)
+(define false #f)

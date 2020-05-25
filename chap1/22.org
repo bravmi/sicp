@@ -1,5 +1,0 @@
-
-1) Roughly 10^0.5 factor - what's expected.
-2) Algo growth estimate is based on the assumption that time ~ number
-   of steps. It's in the middle of before-asked question. That's why
-   weird.

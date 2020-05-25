@@ -1,1 +1,2 @@
-By induction ¯\_(ツ)_/¯
+Induction is straightforward ¯\_(ツ)_/¯
+As for being the closest to phi argument, ksi argument starts as 1/2 and gets smaller and smaller.

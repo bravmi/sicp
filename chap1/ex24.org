@@ -1,4 +1,3 @@
-
 Ok, looks like log but kind of not really consistent on my machine
 with expected. For 2-3 samples together acceptable, but for 10 (10^10
 till 10^100) bundle inconsistency shows up.

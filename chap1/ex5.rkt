@@ -8,4 +8,4 @@
       y))
 
 (module+ main
-  (test 0 (p))) ; infinite loop
+  (test 0 (p))) ; infinite loop, wouldn't matter with normal order
