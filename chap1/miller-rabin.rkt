@@ -18,8 +18,8 @@
          (define x (expmod base (/ exp 2) m))
          (square-check x m))
         (else
-         (remainder (* base (expmod base (- exp 1) m))
-                    m))))
+          (remainder (* base (expmod base (- exp 1) m))
+                     m))))
 
 (define (fermat-test n)
   (define (try-it a)

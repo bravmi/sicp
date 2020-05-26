@@ -9,8 +9,8 @@
          (remainder (square (expmod base (/ exp 2) m))
                     m))
         (else
-         (remainder (* base (expmod base (- exp 1) m))
-                    m))))
+          (remainder (* base (expmod base (- exp 1) m))
+                     m))))
 
 (define (fermat-test n)
   (define (try-it a)
