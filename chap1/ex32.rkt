@@ -1,6 +1,5 @@
-
-(load "../utils.scm")
-
+#lang racket/base
+(require "../utils.rkt")
 
 ; foldl
 (define (accumulate combiner null-value term a next b)
@@ -13,10 +12,11 @@
 
 (define (sum term a next b)
   (accumulate + 0 term a next b))
+
 (define (product term a next b)
   (accumulate * 1 term a next b))
 
-
-(check-expect (sum id 1 inc 10) 55)
-(check-expect (product id 1 inc 10) 3628800)
-(test)
+(module+ test
+  (require rackunit)
+  (check-equal? (sum id 1 inc 10) 55)
+  (check-equal? (product id 1 inc 10) 3628800))
