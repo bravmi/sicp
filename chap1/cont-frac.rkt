@@ -1,3 +1,6 @@
+#lang racket/base
+
+(provide (all-defined-out))
 
 (define (cont-frac n d k)
   (define (rec i)

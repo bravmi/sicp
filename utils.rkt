@@ -39,3 +39,6 @@
 
 (define true #t)
 (define false #f)
+
+(define golden-ratio (/ (+ 1 (sqrt 5))
+                        2))

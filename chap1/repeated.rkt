@@ -1,3 +1,6 @@
+#lang racket/base
+
+(provide (all-defined-out))
 
 (define (compose f g)
   (lambda (x)
