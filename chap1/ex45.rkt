@@ -1,24 +1,24 @@
 #lang racket/base
-(require "../utils.rkt")
+(require (prefix-in utils: "../utils.rkt"))
 (require "fixed-point.rkt")
 (require "repeated.rkt")
 
 (define (average-damp f)
-  (lambda (x) (average x (f x))))
+  (lambda (x) (utils:average x (f x))))
 
 (define (sqrt x)
   (fixed-point (average-damp (lambda (y) (/ x y)))
                1.0))
 
 (define (cube-root x)
-  (fixed-point (average-damp (lambda (y) (/ x (square y))))
+  (fixed-point (average-damp (lambda (y) (/ x (utils:square y))))
                1.0))
 
 (define (repeated-damp f n)
   ((repeated average-damp n) f))
 (define (nth-root x n)
-  (fixed-point (repeated-damp (lambda (y) (/ x (pow y (- n 1))))
-                              (floor (log2 n))) ; damping times
+  (fixed-point (repeated-damp (lambda (y) (/ x (utils:pow y (- n 1))))
+                              (floor (utils:log2 n))) ; damping times
                1.0))
 
 (module+ test

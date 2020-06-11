@@ -1,5 +1,5 @@
 #lang racket/base
-(require "../utils.rkt")
+(require (prefix-in utils: "../utils.rkt"))
 (require "repeated.rkt")
 
 (define (smoothed f)
@@ -16,9 +16,9 @@
 
 (module+ test
   (require rackunit)
-  (check-within ((repeated-smoothed square 2) 5)
+  (check-within ((repeated-smoothed utils:square 2) 5)
                 25.000
                 0.001))
 
 (module+ main
-  (displayln ((repeated-smoothed square 2) 5)))
+  (displayln ((repeated-smoothed utils:square 2) 5)))

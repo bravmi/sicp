@@ -42,3 +42,6 @@
 
 (define golden-ratio (/ (+ 1 (sqrt 5))
                         2))
+
+(define (compose f g)
+  (lambda (x) (f (g x))))

@@ -4,6 +4,7 @@
 
 (provide (all-defined-out))
 
+; perpendicular segments
 (define (make-rect first-segment second-segment)
   (cons first-segment second-segment))
 (define (first-segment rect)
