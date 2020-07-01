@@ -11,5 +11,5 @@
                      (* z (+ z 1))))
                 6)
   ; application: not a procedure;
-  (check-exn exn:fail:contract?
-             (lambda () (f f))))
+  (check-exn exn:fail:contract? (lambda ()
+                                  (f f))))

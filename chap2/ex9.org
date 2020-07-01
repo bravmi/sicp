@@ -1,0 +1,9 @@
+* add / sub
+Let x and y be our intervals and w the width function.
+Then it can be easily proven by construction that
+w(x + y) = w(x) + w(y) and
+w(x - y) = w(x) + w(y) (yes, sum again)
+
+* mul / div
+See counterexample in ex9.rkt
+div by extension
