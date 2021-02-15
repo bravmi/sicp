@@ -3,6 +3,7 @@
 
 (module+ test
   (require rackunit)
+  ; TODO: refactor x to a or smth
   (define x (make-interval 1 2))
   (define y (make-interval 9 10))
   (check-equal? (width-interval x) 0.5)
