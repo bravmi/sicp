@@ -12,9 +12,9 @@
 (define (make-center-percent c p)
   (make-interval (* c (1 - p)) (* c (1 + p))))
 (define (center i)
-  (/ (+ (lower-bound i) (upper-bound i)) 2))
+  (/ (+ (lower-bound i) (upper-bound i)) 2.0))
 (define (percent i)
-  (- (/ (upper-bound i) (center i)) 1))
+  (- (/ (upper-bound i) (center i)) 1.0))
 
 (define (bounds x)
   (cons (lower-bound x)
