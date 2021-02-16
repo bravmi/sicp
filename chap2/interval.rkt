@@ -9,13 +9,6 @@
 (define (lower-bound x) (car x))
 (define (upper-bound x) (cdr x))
 
-(define (make-center-percent c p)
-  (make-interval (* c (1 - p)) (* c (1 + p))))
-(define (center i)
-  (/ (+ (lower-bound i) (upper-bound i)) 2.0))
-(define (percent i)
-  (- (/ (upper-bound i) (center i)) 1.0))
-
 (define (bounds x)
   (cons (lower-bound x)
         (upper-bound x)))
@@ -44,7 +37,7 @@
                     (make-interval (/ 1.0 (upper-bound y))
                                    (/ 1.0 (lower-bound y))))))
 
-(define (width-interval x)
+(define (width x)
   (/ (- (upper-bound x)
         (lower-bound x))
      2.0))
@@ -58,5 +51,4 @@
   (check-within (bounds (div-interval x y))
                 (cons (/ 1 4) (/ 2 3))
                 1e-3)
-  (check-within (width-interval x) 0.5 1e-3))
-  
+  (check-within (width x) 0.5 1e-3))
