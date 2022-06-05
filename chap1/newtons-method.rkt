@@ -17,8 +17,8 @@
 (define (newtons-method g guess)
   (fixed-point (newton-transform g) guess))
 
-(define (sqrt x)
-  (newtons-method (lambda (y) (- (square y) x))
+(define (sqrt x)
+  (newtons-method (lambda (y) (- (square y) x))
                   1.0))
 
 (module+ test

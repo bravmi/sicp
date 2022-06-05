@@ -3,7 +3,7 @@
 
 (define (make-center-percent c p)
   (let ((width (* c (/ p 100))))
-    (make-interval (- c width) (+ c width))))
+    (make-interval (- c width) (+ c width))))
 (define (center i)
   (/ (+ (lower-bound i) (upper-bound i)) 2.0))
 (define (percent i)

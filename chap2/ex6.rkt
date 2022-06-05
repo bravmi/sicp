@@ -1,13 +1,13 @@
 #lang racket/base
 (require "../utils.rkt")
 
-(define zero
-  (lambda (f) (lambda (x)
+(define zero
+  (lambda (f) (lambda (x)
                 x)))
 
-(define (add-1 n)
-  (lambda (f) (lambda (x) 
-                (f ((n f) x)))))
+(define (add-1 n)
+  (lambda (f) (lambda (x) 
+                (f ((n f) x)))))
 
 (define one
   (lambda (f) (lambda (x)
