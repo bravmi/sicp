@@ -1,5 +1,4 @@
 #lang racket/base
-(require "../utils.rkt")
 (require "cont-frac.rkt")
 
 (define (tan-cf x k)

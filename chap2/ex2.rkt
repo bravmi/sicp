@@ -1,5 +1,4 @@
 #lang racket/base
-(require "../utils.rkt")
 (require "segment.rkt")
 
 (module+ test

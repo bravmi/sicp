@@ -1,5 +1,4 @@
 #lang racket/base
-(require racket/math)
 
 (provide (all-defined-out))
 
