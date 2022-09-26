@@ -10,12 +10,12 @@
   (if (= (remainder c 2) 0)
       (+ (car (/ c 2)) 1)
       0))
-  
+
 (define (cdr c)
   (if (= (remainder c 3) 0)
       (+ (cdr (/ c 3)) 1)
       0))
-  
+
 (module+ test
   (require rackunit)
   (define p (cons 5 10))
