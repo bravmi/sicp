@@ -1,0 +1,9 @@
+* product tolerance
+let
+i1 = (x1 * (1 - p1), x1 * (1 + p1))
+i2 = (x2 * (1 - p2), x2 * (1 + p2))
+then
+i1 * i2
+= (x1 * x2 * (1 - p1 - p2 + p1 * p2), x1 * x2 * (1 + p1 + p2 + p1 * p2))
+~= (x1 * x2 * (1 - p1 - p2), x1 * x2 * (1 + p1 + p2))
+i.e. tolerance of the product is the sum of the tolerances of the factors
