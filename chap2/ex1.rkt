@@ -9,8 +9,8 @@
   (define r2 (make-rat 2 6))
   (define r3 (add-rat r1 r2))
   (check-equal? (numer r3) 5)
-  (check-equal? (denom r3) 6)     
-         
+  (check-equal? (denom r3) 6)
+
   (check-equal? (numer (make-rat -1 2)) -1)
   (check-equal? (numer (make-rat 1 -2)) -1)
   (check-equal? (numer (make-rat -1 -2)) 1))
