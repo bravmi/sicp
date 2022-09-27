@@ -13,18 +13,20 @@
 
 (module+ test
   (require rackunit)
-  (define eps 1e-3)
   (test-case
    "percent-tolerance"
-   (define i1 (make-center-percent 10 0.4))
-   (define i2 (make-center-percent 10 0.5))
+   (define eps 1e-1)
+   (define i1 (make-center-percent 10 4))
+   (define i2 (make-center-percent 10 5))
    (define i3 (mul-interval i1 i2))
-   (check-within (percent-tolerance i3) 0.9 eps))
+   (check-within (percent i3) 9 eps))
   (test-case
    "par1"
    (define r1 (make-center-percent 10 4))
    (define r2 (make-center-percent 10 5))
-   (define tol1 (percent-tolerance (par1 r1 r2)))
-   (define tol2 (percent-tolerance (par2 r1 r2)))
+   (define tol1 (percent (par1 r1 r2)))
+   (define tol2 (percent (par2 r1 r2)))
    (define diff (abs (- tol1 tol2)))
-   (check-true (> diff 8) "difference is more than 8%")))
+   (define diff-expected 8)
+   (check-true (> diff diff-expected)
+               (format "difference is more than ~a%" diff-expected))))
