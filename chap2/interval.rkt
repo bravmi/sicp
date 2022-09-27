@@ -50,6 +50,14 @@
 (define (percent i)
   (* (/ (width i) (center i)) 100.0))
 
+(define (percent-tolerance i)
+  (let ((center (/ (+ (upper-bound i) (lower-bound i)) 2.0))
+        (width (/ (- (upper-bound i) (lower-bound i)) 2.0)))
+    (* (/ width center) 100)))
+
+(define (print-interval i)
+  (printf "[~a,~a]\n" (lower-bound i) (upper-bound i)))
+
 (module+ test
   (require rackunit)
   (define x (make-interval 1 2))

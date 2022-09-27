@@ -1,11 +1,6 @@
 #lang racket/base
 (require "interval.rkt")
 
-(define (percent-tolerance i)
-  (let ((center (/ (+ (upper-bound i) (lower-bound i)) 2.0))
-        (width (/ (- (upper-bound i) (lower-bound i)) 2.0)))
-    (* (/ width center) 100)))
-
 (module+ test
   (require rackunit)
   (define eps 1e-3)
