@@ -1,0 +1,3 @@
+* better program
+Yes, Eva is correct, see ex. 2.13 for tighter bounds of par2
+And ex. 2.14 for how errors build up when we use the same interval twice
