@@ -1,2 +1,5 @@
 sicp.ipynb
 .ipynb_checkpoints/
+
+.idea/
+.vscode/
