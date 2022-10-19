@@ -1,2 +1,2 @@
 test:
-	raco test --jobs 4 .
+	raco test --jobs 4 $(or $(path), .)
